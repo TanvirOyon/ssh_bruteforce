@@ -37,7 +37,7 @@ pip install paramiko
 ▶️ How to Run
 Clone this repository or copy the folder to your desktop:
 
-git clone https://github.com/your-username/ssh_attack.git
+git clone https://github.com/TanvirOyon/ssh_bruteforce
 Navigate to the project directory:
 
 cd ~/Desktop/ssh_attack
