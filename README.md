@@ -31,25 +31,16 @@ paramiko
 
 Install required dependency:
 
-bash
-Copy
-Edit
 pip install paramiko
 ▶️ How to Run
 Clone this repository or create the folder manually:
 
-bash
-Copy
-Edit
 git clone https://github.com/TanvirOyon/ssh_bruteforce
 cd ssh_bruteforce
 Or manually place both ssh_bruteforce.py and passwords.txt in a folder named ssh_attack on your Desktop.
 
 Run the script from terminal:
 
-bash
-Copy
-Edit
 cd ~/Desktop/ssh_attack
 python3 ssh_bruteforce.py
 When prompted, enter:
@@ -59,9 +50,7 @@ Target IP address
 Target SSH username
 
 💻 Example Output
-csharp
-Copy
-Edit
+
 Enter target IP address: 192.168.1.100
 Enter target username: admin
 
