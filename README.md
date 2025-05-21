@@ -1,55 +1,67 @@
-# 🔐 SSH Brute-Force Simulation Tool
+🔐 SSH Brute-Force Simulation Tool
+This is a Python-based SSH brute-force attack simulator designed for penetration testing training, cybersecurity demonstrations, and ethical hacking labs. The script leverages the paramiko library to attempt SSH login using a list of passwords from a local text file.
 
-This is a Python-based SSH brute-force attack simulator designed for penetration testing training, and cybersecurity demonstrations. The script uses the `paramiko` library to attempt SSH login with multiple passwords from a text file.
+⚠️ DISCLAIMER
+This tool is intended strictly for authorized educational and ethical use only.
+Do not use this tool against any server or system you do not own or have explicit permission to test.
+Unauthorized access is illegal and punishable under national and international laws.
 
-> ⚠️ **DISCLAIMER:**  
-> This tool is created strictly for **authorized educational use**. Never use this tool against any server or system that you do not own or have explicit permission to test. Unauthorized access is illegal and punishable by law.
-
----
-
-## 📁 Project Structure
+📁 Project Structure
+bash
+Copy
+Edit
 ssh_attack/
-├── ssh_bruteforce.py # Python script for SSH brute-force attempts
-└── passwords.txt # List of passwords to test
+├── ssh_bruteforce.py     # Main Python script for brute-force attempts
+└── passwords.txt         # List of passwords to test
+🚀 Features
+✅ Lightweight and easy-to-read brute-force logic
 
----
+🔑 SSH login attempts using paramiko
 
-## 🚀 Features
+⏱️ Optional delay between tries to reduce lockout risk
 
-- Simple brute-force logic for educational use
-- Uses `paramiko` to establish SSH connections
-- Supports delay between login attempts to avoid lockouts
-- Handles common SSH errors gracefully
-- Clean logging of each attempt and result
+🛡️ Error handling for common SSH/network issues
 
----
+📜 Console log for each login attempt and result
 
-## 🛠️ Requirements
+🛠️ Requirements
+Python 3.6+
 
-- Python 3.6 or higher
-- `paramiko` library
+paramiko
 
-Install requirements with:
+Install required dependency:
 
+bash
+Copy
+Edit
 pip install paramiko
----
-
 ▶️ How to Run
-Clone this repository or copy the folder to your desktop:
+Clone this repository or create the folder manually:
 
+bash
+Copy
+Edit
 git clone https://github.com/TanvirOyon/ssh_bruteforce
-Navigate to the project directory:
+cd ssh_bruteforce
+Or manually place both ssh_bruteforce.py and passwords.txt in a folder named ssh_attack on your Desktop.
 
+Run the script from terminal:
+
+bash
+Copy
+Edit
 cd ~/Desktop/ssh_attack
-Make sure the passwords.txt file exists in the same directory.
-
-Run the script:
-
 python3 ssh_bruteforce.py
-Enter the target IP address and username when prompted.
+When prompted, enter:
+
+Target IP address
+
+Target SSH username
 
 💻 Example Output
-
+csharp
+Copy
+Edit
 Enter target IP address: 192.168.1.100
 Enter target username: admin
 
@@ -58,19 +70,28 @@ Starting brute-force attack on 192.168.1.100 with user 'admin'...
 
 Attempt 1/20: Trying password '123456'
 [FAILURE] Authentication failed.
-...
+
 Attempt 7/20: Trying password 'letmein'
-
 [SUCCESS] Login succeeded with password: 'letmein'
----
-
 📌 Notes
-Use longer delays (delay_seconds) to simulate realistic attacks and avoid account lockouts.
+Use longer delays (e.g., 10–15 seconds) between attempts to simulate real-world attacks and reduce detection/lockout risk.
 
-You can update the password list in passwords.txt with stronger or more specific passwords.
+You can customize passwords.txt with stronger, domain-specific, or more realistic credentials.
+
+The tool stops immediately if a successful login occurs.
 
 🛡️ Legal Notice
-This tool is meant strictly for authorized testing, academic research, or personal lab environments.
-Unauthorized access to systems you do not own or manage is a criminal offense.
+This software is developed only for:
 
-By using this tool, you agree to use it only within legal and ethical boundaries.
+Ethical hacking labs
+
+Red team/internal assessments (with permission)
+
+Academic cybersecurity education
+
+Do not use this tool on unauthorized systems.
+Doing so may violate national and international laws.
+
+By using this tool, you agree to assume full responsibility and operate strictly within legal and ethical boundaries.
+
+📬 Questions or feedback? Feel free to open an issue or contribute to the project.
